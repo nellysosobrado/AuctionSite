@@ -6,8 +6,6 @@ public class Program
 {
     private static void Main(string[] args)
     {
-
-
         // Hämta connection string från appsettings.json
         var builder = new ConfigurationBuilder().AddJsonFile($"appsettings.json", true, true);
 
