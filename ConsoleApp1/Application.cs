@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace SkysDBDemoDatabas
 {
+    // 7: Till sist skapar vi vår Application class
     public class Application
     {
         private readonly string _connectionString;
