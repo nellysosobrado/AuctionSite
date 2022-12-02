@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
-using SkysDBDemoDatabas;
 using ConsoleApp1.Data;
 using Microsoft.EntityFrameworkCore;
 
