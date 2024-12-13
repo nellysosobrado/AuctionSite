@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
+using SkysDBDemoDatabas;
 using ConsoleApp1.Data;
-using Microsoft.EntityFrameworkCore;
 
 public class Program
 {
@@ -12,15 +12,7 @@ public class Program
 
         var connectionString = config.GetConnectionString("DefaultConnection");
 
-        var options = new DbContextOptionsBuilder<RichardsAuctionSiteContext>();
-        options.UseSqlServer(connectionString);
-
-        using (var dbContext = new RichardsAuctionSiteContext(options.Options))
-        {
-            foreach (var user in dbContext.Users.OrderBy(u => u.City))
-            {
-                Console.WriteLine($"{user.Name}: {user.City}");
-            }
-        }
+        var application = new Application(connectionString);
+        application.Run();
     }
 }
